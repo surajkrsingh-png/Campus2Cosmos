@@ -1,0 +1,234 @@
+/* <!-- Gallery Hero Section  --> */
+.gallery-hero {
+ min-height:90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 2rem;
+
+  background: linear-gradient(
+    135deg,
+    var(--dark),
+    var(--secondary),
+    var(--primary)
+  );
+}
+
+.gallery-hero h1 {
+  font-size: 4rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.gallery-hero p {
+  max-width: 45rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* <!-- ========================Gallery Filters =========================== --> */
+
+.gallery-filters {
+  background: var(--light);
+  padding: 3rem 7%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gallery-filters button {
+  background: var(--white);
+  color: var(--text-dark);
+
+  border: 2px solid #e2e8f0;
+  border-radius: 3rem;
+
+  padding: 0.8rem 1.5rem;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+.gallery-filters button:hover {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+
+/* <!-- ====================gallery-grid================ --> */
+
+.gallery-grid {
+  background: var(--light);
+  padding: 0 7% 6rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* ===========acievements section======= */
+.achievements {
+  background: var(--secondary);
+  padding: 6rem 7%;
+  min-height: 70vh;
+}
+
+.achievements .section-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.achievements .section-heading h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.achievements .section-heading p {
+  color: var(--text-light);
+}
+
+.achievement-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: ease 0.3s;
+}
+.achievement-card:hover {
+  transform: translateY(-0.5rem);
+  border-color: var(--gold);
+}
+
+.achievement-card h3 {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+  color: var(--text-light);
+}
+
+/* GALLERY CTA SECTION */
+.gallery-cta {
+  padding: 6rem 7%;
+
+  background: linear-gradient(135deg, #f8fafc, #eff6ff, #dbeafe);
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-cta-content {
+  max-width: 50rem;
+  margin: auto;
+  position: relative;
+}
+
+.gallery-cta h2 {
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.gallery-cta p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.gallery-cta-btn {
+  display: inline-block;
+
+  background: var(--primary);
+  color: var(--white);
+
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+
+  transition: 0.3s;
+}
+
+.gallery-cta-btn:hover {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* ====================Adding responsiveness ============================= */
+@media (max-width: 768px) {
+  .gallery-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .gallery-hero p {
+    font-size: 1rem;
+  }
+
+  /* ========gallery-grid========== */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* <!-- Achievements Section --> */
+
+  .achievement-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* gallery-cta */
+   .gallery-cta h2{
+    font-size:2.2rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .gallery-filters {
+    padding: 2rem 1rem;
+  }
+
+  .gallery-filters button {
+    width: 100%;
+  }
+  /* ========gallery-grid========== */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  /* <!-- Achievements Section --> */
+  .achievement-container {
+    grid-template-columns: 1fr;
+  }
+}
