@@ -141,25 +141,46 @@ li {
 /* =========================== Responsive ================================== */
 
 @media (max-width: 768px) {
-  .nav-top {
-    padding: 0 1rem;
+   .nav-top{
+    padding:0 1rem;
   }
 
-  .nav-top-middle,
-  .nav-top-right {
-    display: none;
+  .nav-top-right{
+    display:none;
   }
 
-  .menu {
-    display: block;
+  .menu{
+    display:block;
   }
 
-  .nav-top-left span {
-    font-size: 1.2rem;
+  .nav-top-left span{
+    font-size:1.2rem;
   }
 
-  .logo {
-    width: 2.5rem;
-    height: 2.5rem;
+  .logo{
+    width:2.5rem;
+    height:2.5rem;
+  }
+
+  .nav-top-middle{
+    position:absolute;
+    top:6rem;
+    left:0;
+
+    width:100%;
+
+    background:var(--dark);
+
+    flex-direction:column;
+    align-items:center;
+    gap:1.5rem;
+
+    padding:2rem 0;
+
+    display:none;
+  }
+
+  .nav-top-middle.active{
+    display:flex;
   }
 }

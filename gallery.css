@@ -56,6 +56,12 @@
   cursor: pointer;
   transition: 0.3s;
 }
+.gallery-filters button.active{
+  background:var(--primary);
+  color:var(--white);
+  border-color:var(--primary);
+}
+
 .gallery-filters button:hover {
   background: var(--primary);
   color: var(--white);
