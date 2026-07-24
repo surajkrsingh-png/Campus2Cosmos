@@ -1,3 +1,4 @@
+// MENU BUTTON
 let menu = document.querySelector(".menu");
 let navLinks = document.querySelector(".nav-top-middle");
 
@@ -5,6 +6,7 @@ menu.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
+//GALLERY BUTTON
 let buttons = document.querySelectorAll(".filter-btn");
 let images = document.querySelectorAll(".gallery-item");
 
@@ -25,5 +27,14 @@ buttons.forEach(function (button) {
         image.style.display = "none";
       }
     });
+  });
+});
+
+// FAQ BUTTON
+let questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(function (question) {
+  question.addEventListener("click", function () {
+    question.parentElement.classList.toggle("active");
   });
 });

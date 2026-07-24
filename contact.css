@@ -274,6 +274,9 @@
 .faq-answer{
   display:none;
 }
+.faq-item.active .faq-answer{
+    display:block;
+}
 
 .faq-answer p{
   color:var(--text-light);
