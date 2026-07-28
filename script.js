@@ -5,10 +5,10 @@ if (typeof emailjs !== "undefined") {
 
 // MENU BUTTON
 let menu = document.querySelector(".menu");
-let navLinks = document.querySelector(".nav-top-middle");
+let navMidLinks = document.querySelector(".nav-top-middle");
 
 menu.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+  navMidLinks.classList.toggle("active");
 });
 
 //GALLERY BUTTON
@@ -82,3 +82,15 @@ if (form) {
       });
   });
 }
+
+let navLinks = document.querySelectorAll(".nav-link");
+console.log(navLinks.length);
+let currentPage = window.location.pathname.split("/").pop();
+
+navLinks.forEach(function (link) {
+  let linkPage = link.getAttribute("href");
+
+  if (linkPage === currentPage) {
+    link.classList.add("active");
+  }
+});

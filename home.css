@@ -59,22 +59,10 @@
   transition: ease 0.5s;
 }
 
-.btn-secondary {
-  border: 2px solid var(--gold);
-  color: var(--white);
-  padding: 0.9rem 2rem;
-  border-radius: 3rem;
-  transition: ease 0.5s;
-}
 .btn-primary:hover {
   transform: scale(1.1);
   box-shadow: 0 0 1rem var(--gold);
 }
-.btn-secondary:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 0.5rem var(--gold);
-}
-
 .hero-right {
   flex: 1;
   position: relative;

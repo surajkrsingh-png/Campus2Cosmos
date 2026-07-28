@@ -330,8 +330,8 @@
 }
 
 .btn-secondary{
-  background:transparent;
-  color:var(--white);
+  /* background:transparent; */
+  color:var(--dark);
   border:2px solid var(--white);
 }
 
@@ -340,8 +340,10 @@
 }
 
 .btn-secondary:hover{
-  background:var(--white);
-  color:var(--primary);
+  background:var(--dark);
+  color:var(--gold);
+    border:2px solid var(--dark);
+
 }
 
 /* ================ADDING RESPONSIVENESS====================== */
