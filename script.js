@@ -15,6 +15,9 @@ menu.addEventListener("click", () => {
 let buttons = document.querySelectorAll(".filter-btn");
 let images = document.querySelectorAll(".gallery-item");
 
+console.log("Buttons:", buttons.length);
+console.log("Images:", images.length);
+
 buttons.forEach(function (button) {
   button.addEventListener("click", function () {
     let category = button.dataset.filter;
