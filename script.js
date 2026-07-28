@@ -38,3 +38,54 @@ questions.forEach(function (question) {
     question.parentElement.classList.toggle("active");
   });
 });
+
+// INQUIRY FORM
+
+let form = document.querySelector("#inquiry-form");
+
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const phone = document.querySelector("#phone").value.trim();
+    const studentClass = document.querySelector("#class").value.trim();
+    const subject = document.querySelector("#subject").value.trim();
+    const message = document.querySelector("#message").value.trim();
+
+    if (name === "") {
+      alert("please enter your name");
+      return;
+    }
+    if (email === "") {
+      alert("please enter your email");
+      return;
+    }
+    if (!email.includes("@")) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    if (phone.length !== 10 || isNaN(phone)) {
+      alert("Please enter a valid 10-digit phone number");
+      return;
+    }
+
+    if (studentClass === "") {
+      alert("Please enter your class");
+      return;
+    }
+
+    if (subject === "") {
+      alert("Please enter your subject");
+      return;
+    }
+
+    if (message === "") {
+      alert("Please enter your message");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+    form.reset();
+  });
